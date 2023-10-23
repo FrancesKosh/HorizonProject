@@ -11,27 +11,77 @@ public class PosLoginPage extends BasePage {
     }
 
     //Locators (finding part)
-    @FindBy(using = "/html/body/app-root/div/app-main/div[1]/div[2]/div[2]/app-login/div/div/div/form/div[1]/input")
+    @FindBy(css = "input[formcontrolname='username']")
     private WebElement usernameLocator;
-
-    @FindBy(using = "/html/body/app-root/div/app-main/div[1]/div[2]/div[2]/app-login/div/div/div/form/div[2]/input")
+    @FindBy(css = " input[formcontrolname='password']")
     private WebElement passwordLocator;
-
-    @FindBy(using ="/html/body/app-root/div/app-main/div[1]/div[2]/div[2]/app-login/div/div/div/div/button")
+    @FindBy(css = "button['class=next-button']")
+    private WebElement nextButtonLocator;
+    @FindBy(css = "select['name=organisation']")
+    private WebElement gordonRamsayHoldingsLocator;
+    @FindBy(css = "select[id='posType']")
+    private WebElement fixedPosTerminalLocator;
+    @FindBy(css = "select[name='site']")
+    private WebElement getGordonRamsayStreetBurgerEdinburghLocator;
+    @FindBy(css = "select[id='receiptPrinter']")
+    private WebElement receiptWorkshopLocator;
+    @FindBy(css = "input[autocomplete='off']")
+    private WebElement nameThisDeviceLocator;
+    @FindBy(css = "button[class='next-button']")
+    private WebElement doneButtonLocator;
+    @FindBy(css = "button[type='submit']")
+    private WebElement getLoginButtonLocator;
+    @FindBy(css = "button[type='submit']")
+    private WebElement getDoneButtonLocator;
+    @FindBy(css = "button[class='btn btn-primary']")
     private WebElement loginButtonLocator;
 
-// Methods (doing part)
+    // Methods (doing part)
     public void enterUserName(String username) {
         usernameLocator.sendKeys(username);
     }
 
-        public void enterPassword(String password){
-            passwordLocator.sendKeys(password);
-
+    public void enterPassword(String password) {
+        passwordLocator.sendKeys(password);
     }
 
-    public void clickOnLoginButton(){
-       loginButtonLocator.click();
+    public void clickOnNextButton() {
+        nextButtonLocator.click();
+    }
+
+    public void selectSite() {
+        gordonRamsayHoldingsLocator.isSelected();
+    }
+
+    // public void clickOnNextButton(){nextButtonLocator.click();}
+    public void selectFixedPosTerminal() {
+        fixedPosTerminalLocator.isSelected();
+    }
+
+    // public void clickOnNextButton(){nextButtonLocator.click();}
+    public void setGetGordonRamsayStreetBurgerEdinburgh() {
+        getGordonRamsayStreetBurgerEdinburghLocator.isSelected();
+    }
+
+    //public void clickOnNextButton(){nextButtonLocator.click();}
+    public void selectReceiptPrinter() {
+        receiptWorkshopLocator.isSelected();
+    }
+
+    public void enterDeviceName(String devicename) {
+        nameThisDeviceLocator.sendKeys(devicename);
+    }
+
+    public void clickOnDoneButton() {
+        doneButtonLocator.click();
+    }
+    //public void enterUserName(String username) {usernameLocator.sendKeys(username);}
+    // public void enterPassword(String password){ passwordLocator.sendKeys(password);}
+    //public void clickOnLoginButton(){loginButtonLocator.click();}
+
+
+    public void clickOnLoginButton() {
+        loginButtonLocator.click();
     }
 
 }

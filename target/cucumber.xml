@@ -1,3 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.048" tests="0" skipped="0" failures="0" errors="0">
+<testsuite name="Cucumber" time="4.374" tests="2" skipped="0" failures="2" errors="0">
+<testcase classname="PosLoginPage" name="Happy Path to log in to hub" time="3.183">
+<failure type="org.openqa.selenium.remote.http.ConnectionFailedException" message="Unable to establish websocket connection to http://localhost:64516/devtools/browser/689823bd-4278-4232-b459-5c38d1cacef9
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: ChromeDriver">
+<![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:64516/devtools/browser/689823bd-4278-4232-b459-5c38d1cacef9
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:50)
+	at StepDef.Hook.innitialize(Hook.java:24)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I am on the pos home page "https://hub-staging.tissl.com".............skipped
+And I enter valid user name.................................................skipped
+And I enter valid password..................................................skipped
+When I click on the log in button...........................................skipped
+Then "I should be on " home " page..........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="PosLoginPage" name="Happy Path to log in to pos" time="0.927">
+<failure type="org.openqa.selenium.remote.http.ConnectionFailedException" message="Unable to establish websocket connection to http://localhost:64528/devtools/browser/f30196ad-c47c-494c-b321-efae273c7b80
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: ChromeDriver">
+<![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:64528/devtools/browser/f30196ad-c47c-494c-b321-efae273c7b80
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:50)
+	at StepDef.Hook.innitialize(Hook.java:24)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I am on the pos home page "https://pos-staging.tissl.com/#/pos/login".skipped
+And I enter valid user name.................................................skipped
+And I enter valid password..................................................skipped
+And I click on the log in button............................................skipped
+And make not changes to preference on the preference page...................skipped
+When I click done button on the preference page.............................skipped
+Then "I should be on on order standard" page................................skipped
+]]></system-out>
+</testcase>
 </testsuite>

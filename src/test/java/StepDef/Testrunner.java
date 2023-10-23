@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "junit:target/cucumber.xml"
 
         },
-        tags = "@TestToRunNext")
-//tags ="@Horizon")
+        //tags = "@TestToRunNext")
+tags ="@Horizon")
 public class Testrunner {
 }

@@ -4,7 +4,7 @@ Feature: PosLoginPage
 
   @Horizon
   Scenario: Happy Path to log in to pos
-    Given I am on the pos home page "https://pos-master.tissl.com/#/pos/login"
+    Given I am on the pos home page "https://pos-staging.tissl.com/#/pos/login"
     And I enter valid user name
     And I enter valid password
     And I click on the log in button
